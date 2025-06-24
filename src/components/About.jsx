@@ -7,12 +7,12 @@ const aboutVariants = {
 };
 
 const skills = [
-  'JavaScript (ES6+)',
-  'React',
-  'Node.js',
   'Python',
-  'SQL',
-  'AWS',
+  'SQL / PostgreSQL',
+  'Tableau',
+  'Power BI',
+  'Pandas & NumPy',
+  'AWS Redshift',
 ];
 
 export default function About() {
@@ -36,16 +36,16 @@ export default function About() {
         variants={aboutVariants}
       >
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          Hello! I'm <span className="text-[#ccd6f6] font-semibold">Shaunak</span>, a <span className="text-[#ccd6f6] font-semibold">data analyst</span> and <span className="text-[#ccd6f6] font-semibold">software engineer</span> passionate about turning data into actionable insights and building <span className="text-[#ccd6f6] font-semibold">modern web experiences</span>. I enjoy solving complex problems and collaborating with others to create impactful solutions.
+          Hello! I'm <span className="text-[#ccd6f6] font-semibold">Shaunak</span>, a <span className="text-[#ccd6f6] font-semibold">data analyst</span> who loves to dive deep into data and surface clear, actionable insights. From building dashboards that empower executives to automating data pipelines that save hours every week, I enjoy turning messy datasets into stories that drive business decisions.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+          Over the past few years I've analysed millions of rows of marketing, product-usage, and operational data for a <span className="text-[#ccd6f6] font-semibold">fast-growing SaaS company</span>, an <span className="text-[#ccd6f6] font-semibold">enterprise HR team</span>, and a <span className="text-[#ccd6f6] font-semibold">non-profit organisation</span>. My work has helped reduce costs, uncover growth opportunities, and improve user experiences.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          Fast-forward to today, and I've had the privilege of building software for an <span className="text-[#ccd6f6] font-semibold">advertising agency</span>, a <span className="text-[#ccd6f6] font-semibold">startup</span>, a <span className="text-[#ccd6f6] font-semibold">huge corporation</span>, and a <span className="text-[#ccd6f6] font-semibold">student-led design studio</span>.
+          When I'm not wrangling data you can find me reading about the latest in behavioural analytics or mentoring new analysts on SQL best practices.
         </p>
         <p className="text-[#8892b0] leading-relaxed mb-4">
-          Here are a few technologies I've been working with recently:
+          Here are a few tools and technologies I work with most:
         </p>
         <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-[#8892b0] text-sm font-mono">
           {skills.map(skill => (

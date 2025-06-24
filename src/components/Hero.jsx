@@ -20,15 +20,15 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
         variants={heroVariants}
-      >Front End Engineer</motion.h2>
+      >Data Analyst</motion.h2>
       <motion.p
         className="max-w-lg text-[#8892b0] mb-6 text-base leading-relaxed"
         initial="hidden"
         animate="visible"
         variants={heroVariants}
       >
-        I build accessible, pixel-perfect digital<br />
-        experiences for the web.
+        I transform complex data into actionable insights<br />
+        that drive informed business decisions.
       </motion.p>
     </section>
   );
