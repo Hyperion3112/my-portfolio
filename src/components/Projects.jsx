@@ -10,7 +10,7 @@ const projects = [
   {
     title: 'University Admissions Dashboard',
     image: '/AdmissionsExplorer.png',
-    tech: ['Salesforce', 'Tableau'],
+    tech: ['Salesforce', 'Tableau', 'Excel'],
     description: 'Interactive Admissions Explorer showing applicant pipeline by term, degree, and geography. Drill into trends, segment by stage (Applied → Admitted → Enrolled), and use filters to compare cohorts. Built from Salesforce data and published in Tableau Public.',
     link: 'https://public.tableau.com/views/AdmissionsExplorer/AdmissionsExplorer?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link',
     hasEmbeddedDashboard: true,
