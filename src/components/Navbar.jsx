@@ -25,6 +25,21 @@ const itemVariants = {
 export default function Navbar({ className = '' }) {
   const [active, setActive] = useState('');
 
+  const handleNavClick = (e, to) => {
+    // Enable smooth scroll behavior programmatically and keep URL hash in sync
+    e.preventDefault();
+    const el = document.querySelector(to);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Update the hash without jumping
+      if (history.pushState) {
+        history.pushState(null, '', to);
+      } else {
+        window.location.hash = to;
+      }
+    }
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
@@ -62,6 +77,7 @@ export default function Navbar({ className = '' }) {
               ></span>
               <a
                 href={link.to}
+                onClick={(e) => handleNavClick(e, link.to)}
                 className={`font-mono text-xs tracking-widest transform transition-all duration-150 px-2 ${isActive ? 'text-white font-bold translate-x-2' : 'text-[#8892b0] hover:text-white group-hover:translate-x-2'}`}
               >
                 {link.label}
