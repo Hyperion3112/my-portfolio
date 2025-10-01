@@ -32,8 +32,8 @@ export default function Navbar({ className = '' }) {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       // Update the hash without jumping
-      if (history.pushState) {
-        history.pushState(null, '', to);
+      if (window.history.pushState) {
+        window.history.pushState(null, '', to);
       } else {
         window.location.hash = to;
       }
