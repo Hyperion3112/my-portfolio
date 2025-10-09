@@ -9,10 +9,10 @@ const projectsVariants = {
 const projects = [
   {
     title: 'AI Powered Stock Forecast Model',
-    image: '/placeholder.png',
+    image: '/AIStockInsights.png',
     tech: ['Flutter', 'Python', 'TensorFlow', 'Pandas', 'Scikit-learn', 'yfinance'],
     description: 'Machine learning application for stock price prediction using historical market data. Built with TensorFlow and Scikit-learn for model training, integrated with yfinance API for real-time data retrieval, and deployed with a Flutter frontend for interactive forecasting and visualization.',
-    link: 'https://my-portfolio-rho-coral-52.vercel.app/',
+    link: 'https://stock-prediction-green.vercel.app/',
     hasEmbeddedDashboard: false,
     embedUrl: null,
   },
