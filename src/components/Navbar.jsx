@@ -78,7 +78,7 @@ export default function Navbar({ className = '' }) {
               <a
                 href={link.to}
                 onClick={(e) => handleNavClick(e, link.to)}
-                className={`font-mono text-xs tracking-widest transform transition-all duration-150 px-2 ${isActive ? 'text-white font-bold translate-x-2' : 'text-[#8892b0] hover:text-white group-hover:translate-x-2'}`}
+                className={`font-mono text-xs tracking-widest transform transition-all duration-150 px-2 ${isActive ? 'text-white font-bold translate-x-2' : 'text-[#8892b0] group-hover:text-white group-hover:translate-x-2'}`}
               >
                 {link.label}
               </a>
