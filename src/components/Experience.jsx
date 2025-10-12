@@ -14,7 +14,7 @@ const experiences = [
     description:
       `Improved operational efficiency by 15% through SQL & Python analyses and stakeholder reporting. Reduced data retrieval time by 25% via optimized ETL pipelines and automated tasks. Boosted client decision-making by 30% with interactive Tableau dashboards and training.`,
     tech: ['SQL', 'Python', 'Tableau'],
-    link: '#',
+    link: 'https://emplindia.com/',
   },
   {
     title: 'Data Analyst Intern',
@@ -23,7 +23,7 @@ const experiences = [
     description:
       `Analyzed and cleaned over 500 candidate profiles using Excel and SQL, improving data accuracy by 40% and standardizing onboarding templates. Automated data workflows with Python and VBA, reducing manual effort by 50% and accelerating weekly report generation. Performed exploratory data analysis on candidate metrics, presented findings to HR, and increased engagement rates by 20% through targeted outreach. Developed Power BI dashboards, documented ETL processes, and facilitated knowledge transfer to junior interns.`,
     tech: ['Excel', 'SQL', 'Python', 'VBA', 'Power BI'],
-    link: '',
+    link: 'https://uandi.org.in/',
   },
 ];
 
@@ -116,20 +116,27 @@ export default function Experience() {
                 </div>
                 <div className="col-span-4 flex flex-col px-6 py-4 md:pl-8">
                   <div className="flex items-center flex-wrap mb-2 w-full">
-                    <span className="text-[#ccd6f6] text-base font-semibold mr-2 group-hover:text-[#64ffda] transition-colors duration-200">
+                    <span className="text-[#ccd6f6] text-base font-semibold group-hover:text-[#64ffda] transition-colors duration-200">
                       {exp.title}
                     </span>
                     {exp.company && (
-                      <span className={`text-base font-normal ml-2 ${exp.company === 'Elite Microsystems' || exp.company === 'U&I Trust' ? 'text-white group-hover:text-[#64ffda]' : 'text-[#64ffda] group-hover:text-white'} transition-colors duration-200`}>
-                        · {exp.company}
-                      </span>
-                    )}
-                    {exp.link && (
-                      <a href={exp.link} target="_blank" rel="noopener noreferrer" className="ml-2 mt-1 inline-block">
-                        <svg width="18" height="18" fill="#64ffda" viewBox="0 0 24 24">
-                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
-                        </svg>
-                      </a>
+                      <>
+                        <span className="text-[#8892b0] mx-2 text-base">·</span>
+                        {exp.link ? (
+                          <a 
+                            href={exp.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={`text-base font-normal ${exp.company === 'Elite Microsystems' || exp.company === 'U&I Trust' ? 'text-white group-hover:text-[#64ffda]' : 'text-[#64ffda] group-hover:text-white'} transition-colors duration-200 hover:underline`}
+                          >
+                            {exp.company}
+                          </a>
+                        ) : (
+                          <span className={`text-base font-normal ${exp.company === 'Elite Microsystems' || exp.company === 'U&I Trust' ? 'text-white group-hover:text-[#64ffda]' : 'text-[#64ffda] group-hover:text-white'} transition-colors duration-200`}>
+                            {exp.company}
+                          </span>
+                        )}
+                      </>
                     )}
                   </div>
                   <div className="text-[#8892b0] leading-relaxed mb-4 max-w-2xl group-hover:text-white transition-colors duration-200">
