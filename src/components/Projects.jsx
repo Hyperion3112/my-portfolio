@@ -172,25 +172,30 @@ export default function Projects() {
               {/* Right: Content */}
               <div className="col-span-4 flex flex-col px-6 py-4 md:pl-8">
                 <div className="flex items-center flex-wrap mb-2 w-full">
-                  <h3 
-                    className={`text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 ${
-                      proj.hasEmbeddedDashboard ? 'cursor-pointer hover:underline' : ''
-                    }`}
-                    onClick={() => proj.hasEmbeddedDashboard && openModal(proj)}
-                  >
-                    {proj.title}
-                  </h3>
-                  {proj.link && (
+                  {proj.link ? (
                     <a 
                       href={proj.link} 
                       target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="ml-2 mt-1 inline-block text-[#64ffda] hover:text-[#64ffda]/80 transition-colors duration-200"
+                      rel="noopener noreferrer"
+                      className="text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 hover:underline"
+                      onClick={(e) => {
+                        if (proj.hasEmbeddedDashboard) {
+                          e.preventDefault();
+                          openModal(proj);
+                        }
+                      }}
                     >
-                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
-                      </svg>
+                      {proj.title}
                     </a>
+                  ) : (
+                    <h3 
+                      className={`text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 ${
+                        proj.hasEmbeddedDashboard ? 'cursor-pointer hover:underline' : ''
+                      }`}
+                      onClick={() => proj.hasEmbeddedDashboard && openModal(proj)}
+                    >
+                      {proj.title}
+                    </h3>
                   )}
                 </div>
                 <p className="text-[#8892b0] leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors duration-200 max-w-2xl">

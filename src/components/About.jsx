@@ -39,10 +39,10 @@ export default function About() {
           Hello! I'm <span className="text-[#ccd6f6] font-semibold">Shaunak</span>, a <span className="text-[#ccd6f6] font-semibold">data analyst</span> who loves to dive deep into data and surface clear, actionable insights. From building dashboards that empower executives to automating data pipelines that save hours every week, I enjoy turning messy datasets into stories that drive business decisions.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          Over the past few years I've analysed millions of rows of marketing, product-usage, and operational data for a <span className="text-[#ccd6f6] font-semibold">fast-growing SaaS company</span>, an <span className="text-[#ccd6f6] font-semibold">enterprise HR team</span>, and a <span className="text-[#ccd6f6] font-semibold">non-profit organisation</span>. My work has helped reduce costs, uncover growth opportunities, and improve user experiences.
+          Over the past few years I've analysed millions of rows of marketing, product-usage, and operational data for a <span className="text-[#ccd6f6] font-semibold">fast-growing SaaS company</span> and a <span className="text-[#ccd6f6] font-semibold">non-profit organisation</span>. My work has helped reduce costs, uncover growth opportunities, and improve user experiences.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          When I'm not wrangling data you can find me reading about the latest in behavioural analytics or mentoring new analysts on SQL best practices.
+          When I'm not wrangling data you can find me reading about the latest in behavioural analytics.
         </p>
         <p className="text-[#8892b0] leading-relaxed mb-4">
           Here are a few tools and technologies I work with most:
