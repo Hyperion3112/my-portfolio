@@ -15,4 +15,4 @@ export default function RightSidebar() {
       <div className="w-px h-24 bg-[#8892b0] mt-8"></div>
     </div>
   );
-} 
+}

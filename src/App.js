@@ -27,9 +27,9 @@ export default function App() {
 
   return (
     <div className="bg-[#081529] text-white font-sans min-h-screen flex flex-col md:flex-row relative">
-      {/* Cursor-following gradient overlay */}
+      {/* Cursor-following gradient overlay - hidden on mobile, visible on desktop */}
       <div 
-        className="fixed inset-0 pointer-events-none z-0 transition-opacity duration-300"
+        className="hidden md:block fixed inset-0 pointer-events-none z-0 transition-opacity duration-300"
         style={{
           background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
         }}

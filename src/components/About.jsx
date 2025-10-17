@@ -19,14 +19,13 @@ export default function About() {
   return (
     <section id="about" className="py-12 md:py-24 flex flex-col items-start max-w-2xl">
       <motion.div
-        className="flex items-center mb-10 w-full sticky top-0 md:relative bg-[#081529] md:bg-transparent py-4 md:py-0 z-20"
+        className="mb-10 w-full sticky top-0 md:relative bg-[#081529]/60 md:bg-transparent backdrop-blur-sm py-4 md:py-0 z-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.6 }}
         variants={aboutVariants}
       >
-        <h2 className="text-[#ccd6f6] text-xl md:text-2xl font-bold mr-4">About Me</h2>
-        <div className="flex-1 h-px bg-[#233554]"></div>
+        <h2 className="text-[#ccd6f6] text-xl md:text-2xl font-bold">About Me</h2>
       </motion.div>
       <motion.div
         className="w-full"
