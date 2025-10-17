@@ -35,18 +35,21 @@ export default function App() {
         }}
       />
       
-      {/* Left column: Hero, Navbar, Socials - Sticky */}
-      <div className="w-full md:w-1/2 flex flex-col md:h-screen py-12 px-12 md:sticky md:top-0 justify-between relative z-10">
+      {/* Left column: Hero, Navbar, Socials - Sticky on desktop, normal flow on mobile */}
+      <div className="w-full md:w-1/2 flex flex-col py-8 px-6 md:py-12 md:pl-16 md:pr-12 md:h-screen md:sticky md:top-0 justify-between relative z-10">
         <div>
           <Hero />
-          <Navbar className="-mt-2" />
+          {/* Hide navbar on mobile, show on desktop */}
+          <div className="hidden md:block">
+            <Navbar className="md:-mt-2" />
+          </div>
         </div>
-        <div className="mb-16 ml-28">
+        <div className="mt-8 md:mt-0 md:mb-16 ml-0 md:ml-28">
           <Sidebar />
         </div>
       </div>
       {/* Right column: Main content - Scrollable */}
-      <div className="w-full md:w-1/2 px-8 max-w-3xl mx-auto -ml-24 text-sm relative z-10 md:overflow-y-auto">
+      <div className="w-full md:w-1/2 px-6 md:px-8 max-w-3xl md:mx-auto md:-ml-24 text-sm relative z-10 md:overflow-y-auto">
         <About />
         <Experience />
         <Projects />

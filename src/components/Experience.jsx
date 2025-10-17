@@ -31,15 +31,15 @@ export default function Experience() {
   return (
     <>
       {/* Education Section */}
-      <section id="education" className="pt-12">
+      <section id="education" className="pt-6 md:pt-12">
         <motion.div
-          className="flex items-center mb-10"
+          className="flex items-center mb-10 sticky top-0 md:relative bg-[#081529] md:bg-transparent py-4 md:py-0 z-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.6 }}
           variants={experienceVariants}
         >
-          <h2 className="text-[#ccd6f6] text-2xl font-bold mr-4">Education</h2>
+          <h2 className="text-[#ccd6f6] text-xl md:text-2xl font-bold mr-4">Education</h2>
           <div className="flex-1 h-px bg-[#233554]"></div>
         </motion.div>
         <div className="flex flex-col gap-12">
@@ -88,15 +88,15 @@ export default function Experience() {
         </div>
       </section>
       {/* Experience Section */}
-      <section id="experience" className="py-24">
+      <section id="experience" className="py-12 md:py-24">
         <motion.div
-          className="flex items-center mb-10"
+          className="flex items-center mb-10 sticky top-0 md:relative bg-[#081529] md:bg-transparent py-4 md:py-0 z-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.6 }}
           variants={experienceVariants}
         >
-          <h2 className="text-[#ccd6f6] text-2xl font-bold mr-4">Where I've Worked</h2>
+          <h2 className="text-[#ccd6f6] text-xl md:text-2xl font-bold mr-4">Where I've Worked</h2>
           <div className="flex-1 h-px bg-[#233554]"></div>
         </motion.div>
         <div className="flex flex-col gap-12">

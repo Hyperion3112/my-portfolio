@@ -32,8 +32,8 @@ const socialLinks = [
 
 export default function Sidebar({ className = '' }) {
   return (
-    <div className={`w-full flex justify-start ml-4 md:ml-8 ${className}`}>
-      <div className="flex flex-row space-x-6 self-center">
+    <div className={`w-full flex justify-center md:justify-start ml-0 md:ml-4 lg:ml-8 ${className}`}>
+      <div className="flex flex-row space-x-5 md:space-x-6 self-center">
         {socialLinks.map((link, index) => (
           <a
             key={link.name}
@@ -43,7 +43,9 @@ export default function Sidebar({ className = '' }) {
             className="text-[#8892b0] hover:text-[#64ffda] transition-colors duration-200 font-mono"
             aria-label={link.name}
           >
-            {link.icon}
+            <div className="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center">
+              {link.icon}
+            </div>
           </a>
         ))}
       </div>

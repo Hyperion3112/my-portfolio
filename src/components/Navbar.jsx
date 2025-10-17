@@ -61,7 +61,7 @@ export default function Navbar({ className = '' }) {
   }, []);
 
   return (
-    <nav className={`flex flex-col space-y-2 text-sm font-medium ml-20 ${className}`}>
+    <nav className={`flex flex-col space-y-2 text-sm font-medium ml-4 md:ml-20 ${className}`}>
       <motion.ul
         className="flex flex-col"
         initial="hidden"
@@ -73,7 +73,7 @@ export default function Navbar({ className = '' }) {
           return (
             <motion.li key={link.to} variants={itemVariants} className="flex items-center group transition-all duration-150 py-2">
               <span
-                className={`h-px mr-2 transition-all duration-150 ${isActive ? 'bg-white w-20' : 'bg-[#233554] w-8 group-hover:w-20 group-hover:bg-white'}`}
+                className={`h-px mr-2 transition-all duration-150 ${isActive ? 'bg-white w-12 md:w-20' : 'bg-[#233554] w-6 md:w-8 group-hover:w-12 md:group-hover:w-20 group-hover:bg-white'}`}
               ></span>
               <a
                 href={link.to}
