@@ -34,6 +34,15 @@ const projects = [
     hasEmbeddedDashboard: true,
     embedUrl: 'https://public.tableau.com/views/ProductAnalystDashboard_17590385791200/ProductAnalytics?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=no&:toolbar=yes',
   },
+  {
+    title: 'SubGuard',
+    image: '/subguard_thumbnail.png',
+    tech: ['React', 'Privacy-First', 'Local Processing'],
+    description: 'Subscription Tracker & Savings Analyzer. A privacy-first forensic financial tool to regain control over your recurring expenses. 100% Client-Side processing—drag & drop your statement, we find the leaks.',
+    link: 'https://subguard-omega.vercel.app/',
+    hasEmbeddedDashboard: false,
+    embedUrl: null,
+  },
 ];
 
 // Thumbnail component with robust error handling and public URL support
