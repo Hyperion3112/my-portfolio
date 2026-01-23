@@ -36,7 +36,7 @@ const projects = [
   },
   {
     title: 'SubGuard',
-    // image: '/subguard_thumbnail.png',
+    image: '/subguard_screenshot.png',
     tech: ['React', 'Tailwind CSS', 'Vite', 'PapaParse', 'SheetJS', 'Framer Motion'],
     description: 'A privacy-focused financial tool built with React, Vite, and Tailwind CSS. Leverages PapaParse and SheetJS to parse generic statement formats (CSV, Excel) and PDF functionality entirely on the client side, ensuring sensitive financial data is processed locally without server uploads.',
     link: 'https://subguard-omega.vercel.app/',
