@@ -36,9 +36,9 @@ const projects = [
   },
   {
     title: 'SubGuard',
-    image: '/subguard_thumbnail.png',
+    // image: '/subguard_thumbnail.png',
     tech: ['React', 'Privacy-First', 'Local Processing'],
-    description: 'Subscription Tracker & Savings Analyzer. A privacy-first forensic financial tool to regain control over your recurring expenses. 100% Client-Side processing—drag & drop your statement, we find the leaks.',
+    description: 'A privacy-first subscription tracker that helps you stop bleeding cash. Drag & drop your bank statements (CSV, Excel, JSON, PDF) to instantly analyze recurring expenses. Features 100% client-side processing so your financial data never leaves your device.',
     link: 'https://subguard-omega.vercel.app/',
     hasEmbeddedDashboard: false,
     embedUrl: null,
@@ -83,7 +83,7 @@ function ProjectThumbnail({ src, alt, size = 'w-28 h-20' }) {
   return (
     <div className={`relative ${size}`}>
       {/* Background tile to ensure visibility even before image loads */}
-  <div className="absolute inset-0 rounded-lg bg-[#0e1d33] border border-[#233554] ring-1 ring-white/10 shadow" />
+      <div className="absolute inset-0 rounded-lg bg-[#0e1d33] border border-[#233554] ring-1 ring-white/10 shadow" />
       {!hasError ? (
         <img
           src={finalUrl}
@@ -181,9 +181,9 @@ export default function Projects() {
               <div className="col-span-4 flex flex-col px-6 py-4 md:pl-8">
                 <div className="flex items-center flex-wrap mb-2 w-full">
                   {proj.link ? (
-                    <a 
-                      href={proj.link} 
-                      target="_blank" 
+                    <a
+                      href={proj.link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 hover:underline"
                       onClick={(e) => {
@@ -196,10 +196,9 @@ export default function Projects() {
                       {proj.title}
                     </a>
                   ) : (
-                    <h3 
-                      className={`text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 ${
-                        proj.hasEmbeddedDashboard ? 'cursor-pointer hover:underline' : ''
-                      }`}
+                    <h3
+                      className={`text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 ${proj.hasEmbeddedDashboard ? 'cursor-pointer hover:underline' : ''
+                        }`}
                       onClick={() => proj.hasEmbeddedDashboard && openModal(proj)}
                     >
                       {proj.title}
@@ -265,7 +264,7 @@ export default function Projects() {
                   className="text-[#8892b0] hover:text-white transition-colors duration-200 p-2"
                 >
                   <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.36 6.64a1 1 0 0 1 0 1.41L13.41 12l4.95 4.95a1 1 0 1 1-1.41 1.41L12 13.41l-4.95 4.95a1 1 0 0 1-1.41-1.41L10.59 12 5.64 7.05a1 1 0 0 1 1.41-1.41L12 10.59l4.95-4.95a1 1 0 0 1 1.41 0z"/>
+                    <path d="M18.36 6.64a1 1 0 0 1 0 1.41L13.41 12l4.95 4.95a1 1 0 1 1-1.41 1.41L12 13.41l-4.95 4.95a1 1 0 0 1-1.41-1.41L10.59 12 5.64 7.05a1 1 0 0 1 1.41-1.41L12 10.59l4.95-4.95a1 1 0 0 1 1.41 0z" />
                   </svg>
                 </button>
               </div>
@@ -288,7 +287,7 @@ export default function Projects() {
                 <p className="text-[#8892b0] text-xs mt-3 italic text-center">
                   Interactive dashboard - Click points to filter bars • Use filters on the right
                 </p>
-                
+
                 {/* External Link */}
                 <div className="mt-4 text-center">
                   <a
@@ -299,7 +298,7 @@ export default function Projects() {
                   >
                     <span>Open in Tableau Public</span>
                     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" className="ml-1">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
                     </svg>
                   </a>
                 </div>
