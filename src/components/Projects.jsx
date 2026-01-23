@@ -37,8 +37,8 @@ const projects = [
   {
     title: 'SubGuard',
     // image: '/subguard_thumbnail.png',
-    tech: ['React', 'Privacy-First', 'Local Processing'],
-    description: 'A privacy-first subscription tracker that helps you stop bleeding cash. Drag & drop your bank statements (CSV, Excel, JSON, PDF) to instantly analyze recurring expenses. Features 100% client-side processing so your financial data never leaves your device.',
+    tech: ['React', 'Tailwind CSS', 'Vite', 'PapaParse', 'SheetJS', 'Framer Motion'],
+    description: 'A privacy-focused financial tool built with React, Vite, and Tailwind CSS. Leverages PapaParse and SheetJS to parse generic statement formats (CSV, Excel) and PDF functionality entirely on the client side, ensuring sensitive financial data is processed locally without server uploads.',
     link: 'https://subguard-omega.vercel.app/',
     hasEmbeddedDashboard: false,
     embedUrl: null,
