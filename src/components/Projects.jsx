@@ -8,6 +8,15 @@ const projectsVariants = {
 
 const projects = [
   {
+    title: 'AI Demand & Adoption Intelligence',
+    image: '/AIDemandIntelligence.png',
+    tech: ['Next.js', 'React', 'Tailwind CSS', 'Tableau', 'TypeScript'],
+    description: 'An interactive platform to explore and compare AI tool adoption across Coding, Image, and Video categories. Built with Next.js and Tailwind CSS, it features embedded Tableau dashboards for deep dives into Google Trends data, demand scores, and growth metrics.',
+    link: 'https://ai-demand-intelligence.vercel.app',
+    hasEmbeddedDashboard: false,
+    embedUrl: null,
+  },
+  {
     title: 'AI Powered Stock Forecast Model',
     image: '/AIStockInsights.png',
     tech: ['Flutter', 'Python', 'TensorFlow', 'Pandas', 'Scikit-learn', 'yfinance'],
