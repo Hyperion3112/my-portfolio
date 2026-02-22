@@ -26,6 +26,15 @@ const projects = [
     embedUrl: null,
   },
   {
+    title: 'SubGuard',
+    image: '/subguard_screenshot.png',
+    tech: ['React', 'Tailwind CSS', 'Vite', 'PapaParse', 'SheetJS', 'Framer Motion'],
+    description: 'A privacy-focused financial tool built with React, Vite, and Tailwind CSS. Leverages PapaParse and SheetJS to parse generic statement formats (CSV, Excel) and PDF functionality entirely on the client side, ensuring sensitive financial data is processed locally without server uploads.',
+    link: 'https://subguard-omega.vercel.app/',
+    hasEmbeddedDashboard: false,
+    embedUrl: null,
+  },
+  {
     title: 'University Admissions Dashboard',
     image: '/AdmissionsExplorer.png',
     tech: ['Salesforce', 'Tableau', 'Excel'],
@@ -42,15 +51,6 @@ const projects = [
     link: 'https://public.tableau.com/views/ProductAnalystDashboard_17590385791200/ProductAnalytics?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link',
     hasEmbeddedDashboard: true,
     embedUrl: 'https://public.tableau.com/views/ProductAnalystDashboard_17590385791200/ProductAnalytics?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=no&:toolbar=yes',
-  },
-  {
-    title: 'SubGuard',
-    image: '/subguard_screenshot.png',
-    tech: ['React', 'Tailwind CSS', 'Vite', 'PapaParse', 'SheetJS', 'Framer Motion'],
-    description: 'A privacy-focused financial tool built with React, Vite, and Tailwind CSS. Leverages PapaParse and SheetJS to parse generic statement formats (CSV, Excel) and PDF functionality entirely on the client side, ensuring sensitive financial data is processed locally without server uploads.',
-    link: 'https://subguard-omega.vercel.app/',
-    hasEmbeddedDashboard: false,
-    embedUrl: null,
   },
 ];
 
