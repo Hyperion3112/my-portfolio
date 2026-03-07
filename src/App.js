@@ -28,13 +28,13 @@ export default function App() {
   return (
     <div className="bg-[#081529] text-white font-sans min-h-screen flex flex-col md:flex-row relative">
       {/* Cursor-following gradient overlay - hidden on mobile, visible on desktop */}
-      <div 
+      <div
         className="hidden md:block fixed inset-0 pointer-events-none z-0 transition-opacity duration-300"
         style={{
           background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
         }}
       />
-      
+
       {/* Left column: Hero, Navbar, Socials - Sticky on desktop, normal flow on mobile */}
       <div className="w-full md:w-1/2 flex flex-col py-8 px-6 md:py-12 md:pl-16 md:pr-12 md:h-screen md:sticky md:top-0 justify-between relative z-10">
         <div>

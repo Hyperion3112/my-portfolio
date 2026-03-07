@@ -35,6 +35,26 @@ const projects = [
     embedUrl: null,
   },
   {
+    title: 'Global GenAI Adoption & Intent Analysis (2024-2025)',
+    image: 'https://public.tableau.com/static/images/Gl/GlobalGenAIAdoptionIntent2024-2025Analysis/Dashboard1GlobalBenchmark/1.png',
+    tech: ['Python', 'Data Modeling', 'Tableau', 'Data Visualization', 'Analytics'],
+    description: 'This project analyzes 18 months of OpenAI "Signals" data to map the global landscape of Generative AI. It tracks geographic adoption ranks, shifts in user intent toward technical productivity, and demographic usage trends. Built using Python for data modeling and Tableau for visualization.',
+    link: 'https://public.tableau.com/views/GlobalGenAIAdoptionIntent2024-2025Analysis/Dashboard1GlobalBenchmark?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link',
+    hasEmbeddedDashboard: true,
+    embedUrl: 'https://public.tableau.com/views/GlobalGenAIAdoptionIntent2024-2025Analysis/Dashboard1GlobalBenchmark?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=no&:toolbar=yes&:showAppBanner=false',
+    embedHeight: 850,
+  },
+  {
+    title: 'AI Demand & Adoption Intelligence US',
+    image: 'https://public.tableau.com/static/images/AI/AIDemandAdoptionIntelligenceUS/Dashboard1DemandCommandCenter/1_rss.png',
+    tech: ['Tableau', 'Data Modeling', 'Analytics'],
+    description: 'Interactive Demand Command Center tracking AI tool adoption and demand trends across the United States. Analyzes regional growth and user search behaviors to map the domestic AI landscape.',
+    link: 'https://public.tableau.com/views/AIDemandAdoptionIntelligenceUS/Dashboard1DemandCommandCenter?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link',
+    hasEmbeddedDashboard: true,
+    embedUrl: 'https://public.tableau.com/views/AIDemandAdoptionIntelligenceUS/Dashboard1DemandCommandCenter?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=no&:toolbar=yes&:showAppBanner=false',
+    embedHeight: 880,
+  },
+  {
     title: 'University Admissions Dashboard',
     image: '/AdmissionsExplorer.png',
     tech: ['Salesforce', 'Tableau', 'Excel'],
@@ -160,84 +180,98 @@ export default function Projects() {
     };
   }, [isModalOpen]);
 
+  const categories = [
+    { title: "Web & Software Applications", data: projects.filter(p => !p.hasEmbeddedDashboard) },
+    { title: "Data Analytics Dashboards", data: projects.filter(p => p.hasEmbeddedDashboard) }
+  ];
+
   return (
     <section id="projects" className="py-12 md:py-24">
-      <motion.div
-        className="mb-10 sticky top-0 md:relative bg-[#081529]/60 md:bg-transparent backdrop-blur-sm py-4 md:py-0 z-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
-        variants={projectsVariants}
-      >
-        <h2 className="text-[#ccd6f6] text-xl md:text-2xl font-bold">Some Things I've Built</h2>
-      </motion.div>
-      <div className="flex flex-col gap-8">
-        {projects.map((proj, idx) => (
+      {categories.map((category) => (
+        <div key={category.title} className="mb-16 last:mb-0">
           <motion.div
-            key={proj.title}
-            className="group relative rounded-lg border border-transparent bg-transparent transition-all duration-200 p-0 hover:bg-[#112240] hover:shadow-[0_4px_32px_0_rgba(100,255,218,0.10)]"
+            className="mb-10 sticky top-0 md:relative bg-[#081529]/60 md:bg-transparent backdrop-blur-sm py-4 md:py-0 z-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.6 }}
             variants={projectsVariants}
           >
-            <div className="grid grid-cols-1 md:grid-cols-5 items-stretch md:gap-x-[10rem]">
-              {/* Left: Project Thumbnail */}
-              <div className="col-span-1 flex items-start px-6 py-4 md:min-w-[12rem] justify-start">
-                <ProjectThumbnail src={proj.image} alt={`${proj.title} preview`} size="w-32 h-24 md:w-40 md:h-28" />
-              </div>
-              {/* Right: Content */}
-              <div className="col-span-4 flex flex-col px-6 py-4 md:pl-8">
-                <div className="flex items-center flex-wrap mb-2 w-full">
-                  {proj.link ? (
-                    <a
-                      href={proj.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 hover:underline"
-                      onClick={(e) => {
-                        if (proj.hasEmbeddedDashboard) {
-                          e.preventDefault();
-                          openModal(proj);
-                        }
-                      }}
-                    >
-                      {proj.title}
-                    </a>
-                  ) : (
-                    <h3
-                      className={`text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 ${proj.hasEmbeddedDashboard ? 'cursor-pointer hover:underline' : ''
-                        }`}
-                      onClick={() => proj.hasEmbeddedDashboard && openModal(proj)}
-                    >
-                      {proj.title}
-                    </h3>
-                  )}
-                </div>
-                <p className="text-[#8892b0] leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors duration-200 max-w-2xl">
-                  {proj.description}
-                  {proj.hasEmbeddedDashboard && (
-                    <span className="text-[#64ffda] ml-2 text-xs font-mono">
-                      (Click title to view dashboard)
-                    </span>
-                  )}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {proj.tech && proj.tech.length > 0 ? (
-                    proj.tech.map(tech => (
-                      <span key={tech} className="bg-[#233554] text-[#64ffda] px-2 py-0.5 rounded-full text-[11px] font-mono group-hover:text-white transition-colors duration-200">
-                        {tech}
-                      </span>
-                    ))
-                  ) : (
-                    <span className="text-[#8892b0] text-xs font-mono group-hover:text-white transition-colors duration-200">—</span>
-                  )}
-                </div>
-              </div>
+            <div className="flex items-center gap-4">
+              <h2 className="text-[#ccd6f6] text-xl md:text-2xl font-bold flex items-center whitespace-nowrap">
+                {category.title}
+              </h2>
+              <div className="h-[1px] bg-[#233554] flex-grow" />
             </div>
           </motion.div>
-        ))}
-      </div>
+          <div className="flex flex-col gap-8">
+            {category.data.map((proj, idx) => (
+              <motion.div
+                key={proj.title}
+                className="group relative rounded-lg border border-transparent bg-transparent transition-all duration-200 p-0 hover:bg-[#112240] hover:shadow-[0_4px_32px_0_rgba(100,255,218,0.10)]"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.6 }}
+                variants={projectsVariants}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-5 items-stretch md:gap-x-[10rem]">
+                  {/* Left: Project Thumbnail */}
+                  <div className="col-span-1 flex items-start px-6 py-4 md:min-w-[12rem] justify-start">
+                    <ProjectThumbnail src={proj.image} alt={`${proj.title} preview`} size="w-32 h-24 md:w-40 md:h-28" />
+                  </div>
+                  {/* Right: Content */}
+                  <div className="col-span-4 flex flex-col px-6 py-4 md:pl-8">
+                    <div className="flex items-center flex-wrap mb-2 w-full">
+                      {proj.link ? (
+                        <a
+                          href={proj.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 hover:underline"
+                          onClick={(e) => {
+                            if (proj.hasEmbeddedDashboard) {
+                              e.preventDefault();
+                              openModal(proj);
+                            }
+                          }}
+                        >
+                          {proj.title}
+                        </a>
+                      ) : (
+                        <h3
+                          className={`text-[#ccd6f6] font-semibold text-xl mr-2 group-hover:text-[#64ffda] transition-colors duration-200 ${proj.hasEmbeddedDashboard ? 'cursor-pointer hover:underline' : ''
+                            }`}
+                          onClick={() => proj.hasEmbeddedDashboard && openModal(proj)}
+                        >
+                          {proj.title}
+                        </h3>
+                      )}
+                    </div>
+                    <p className="text-[#8892b0] leading-relaxed mb-4 flex-grow group-hover:text-white transition-colors duration-200 max-w-2xl">
+                      {proj.description}
+                      {proj.hasEmbeddedDashboard && (
+                        <span className="text-[#64ffda] ml-2 text-xs font-mono">
+                          (Click title to view dashboard)
+                        </span>
+                      )}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      {proj.tech && proj.tech.length > 0 ? (
+                        proj.tech.map(tech => (
+                          <span key={tech} className="bg-[#233554] text-[#64ffda] px-2 py-0.5 rounded-full text-[11px] font-mono group-hover:text-white transition-colors duration-200">
+                            {tech}
+                          </span>
+                        ))
+                      ) : (
+                        <span className="text-[#8892b0] text-xs font-mono group-hover:text-white transition-colors duration-200">—</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      ))}
 
       {/* Modal for Dashboard */}
       <AnimatePresence>
@@ -251,7 +285,7 @@ export default function Projects() {
             style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
           >
             <motion.div
-              className="bg-[#0a1525] rounded-lg border border-[#233554] shadow-2xl p-6 max-w-7xl w-full max-h-[95vh] overflow-auto relative"
+              className="bg-[#0a1525] rounded-lg border border-[#233554] shadow-2xl p-6 max-w-[95vw] md:max-w-[90vw] lg:max-w-[1400px] w-full max-h-[95vh] overflow-auto relative"
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -279,19 +313,23 @@ export default function Projects() {
               </div>
 
               {/* Dashboard Iframe */}
-              <div className="w-full">
-                <div className="rounded-md overflow-hidden border border-[#233554] bg-white">
-                  <iframe
-                    src={selectedProject.embedUrl}
-                    width="100%"
-                    height="700"
-                    frameBorder="0"
-                    allowFullScreen
-                    className="rounded-md"
-                    title={`${selectedProject.title} - Interactive Dashboard`}
-                    onLoad={() => console.log('Dashboard loaded successfully')}
-                    onError={() => console.log('Dashboard failed to load')}
-                  />
+              <div className="w-full h-full overflow-hidden">
+                <div className="rounded-md overflow-hidden border border-[#233554] bg-white w-full mx-auto flex justify-center items-center">
+                  <div style={{ width: '100%', maxWidth: '1400px', height: selectedProject.embedHeight || 700, overflow: 'hidden' }}>
+                    <iframe
+                      src={selectedProject.embedUrl}
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      allowFullScreen
+                      scrolling="no"
+                      style={{ overflow: 'hidden' }}
+                      className="rounded-md border-none"
+                      title={`${selectedProject.title} - Interactive Dashboard`}
+                      onLoad={() => console.log('Dashboard loaded successfully')}
+                      onError={() => console.log('Dashboard failed to load')}
+                    />
+                  </div>
                 </div>
                 <p className="text-[#8892b0] text-xs mt-3 italic text-center">
                   Interactive dashboard - Click points to filter bars • Use filters on the right
