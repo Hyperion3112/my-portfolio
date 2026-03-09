@@ -55,6 +55,17 @@ const projects = [
     embedHeight: 880,
   },
   {
+    title: 'Netflix Content Strategy Analysis',
+    image: 'https://public.tableau.com/static/images/Ne/NetflixMoviesandTVShows_17729375782800/ContentStrategy/1.png',
+    tech: ['Tableau', 'Data Visualization', 'Data Analytics'],
+    description: 'Interactive Tableau dashboard exploring Netflix\'s content library evolution and strategy. Analyzes over 8,700 titles to uncover trends in global production, audience demographics, and the exponential growth of original content since 2015.',
+    link: 'https://public.tableau.com/views/NetflixMoviesandTVShows_17729375782800/ContentStrategy?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link',
+    hasEmbeddedDashboard: true,
+    embedUrl: 'https://public.tableau.com/views/NetflixMoviesandTVShows_17729375782800/ContentStrategy?:language=en-US&:display_count=n&:origin=viz_share_link&:embed=y&:showVizHome=no&:toolbar=yes&:showAppBanner=false',
+    embedHeight: 768,
+    embedWidth: 1366,
+  },
+  {
     title: 'University Admissions Dashboard',
     image: '/AdmissionsExplorer.png',
     tech: ['Salesforce', 'Tableau', 'Excel'],
@@ -285,7 +296,7 @@ export default function Projects() {
             style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
           >
             <motion.div
-              className="bg-[#0a1525] rounded-lg border border-[#233554] shadow-2xl p-6 max-w-[95vw] md:max-w-[90vw] lg:max-w-[1400px] w-full max-h-[95vh] overflow-auto relative"
+              className="bg-[#0a1525] rounded-lg border border-[#233554] shadow-2xl p-6 max-w-[95vw] md:max-w-[90vw] lg:max-w-[1500px] w-full max-h-[95vh] overflow-auto relative"
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -314,22 +325,23 @@ export default function Projects() {
 
               {/* Dashboard Iframe */}
               <div className="w-full h-full overflow-hidden">
-                <div className="rounded-md overflow-hidden border border-[#233554] bg-white w-full mx-auto flex justify-center items-center">
-                  <div style={{ width: '100%', maxWidth: '1400px', height: selectedProject.embedHeight || 700, overflow: 'hidden' }}>
-                    <iframe
-                      src={selectedProject.embedUrl}
-                      width="100%"
-                      height="100%"
-                      frameBorder="0"
-                      allowFullScreen
-                      scrolling="no"
-                      style={{ overflow: 'hidden' }}
-                      className="rounded-md border-none"
-                      title={`${selectedProject.title} - Interactive Dashboard`}
-                      onLoad={() => console.log('Dashboard loaded successfully')}
-                      onError={() => console.log('Dashboard failed to load')}
-                    />
-                  </div>
+                <div
+                  className="rounded-md overflow-hidden border border-[#233554] bg-white w-full mx-auto"
+                  style={{ maxWidth: selectedProject.embedWidth ? `${selectedProject.embedWidth}px` : '100%', height: selectedProject.embedHeight || 700, overflow: 'hidden' }}
+                >
+                  <iframe
+                    src={selectedProject.embedUrl}
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allowFullScreen
+                    scrolling="no"
+                    style={{ overflow: 'hidden' }}
+                    className="rounded-md border-none"
+                    title={`${selectedProject.title} - Interactive Dashboard`}
+                    onLoad={() => console.log('Dashboard loaded successfully')}
+                    onError={() => console.log('Dashboard failed to load')}
+                  />
                 </div>
                 <p className="text-[#8892b0] text-xs mt-3 italic text-center">
                   Interactive dashboard - Click points to filter bars • Use filters on the right
