@@ -8,6 +8,24 @@ const experienceVariants = {
 
 const experiences = [
   {
+    title: 'Data Engineer',
+    company: 'Blue Horse Digital',
+    period: 'FEB 2026 – PRESENT',
+    description:
+      `Building and maintaining data pipelines and ML architectures as a volunteer data engineer. Focused on designing data-driven software solutions — from ingestion to model serving — and collaborating with the team to ship reliable, scalable systems.`,
+    tech: ['Data Engineering', 'Machine Learning', 'Python', 'SQL'],
+    link: null,
+  },
+  {
+    title: 'Research Assistant',
+    company: 'George Mason University',
+    period: 'JUL 2025 – FEB 2026',
+    description:
+      `Worked under faculty at the School of Computing, using Python, SQL, and Tableau to clean, analyze, and visualize research data for analytics projects. Built interactive dashboards and wrote scripts to automate repetitive data prep tasks, freeing up time for actual research work.`,
+    tech: ['Python', 'SQL', 'Tableau'],
+    link: null,
+  },
+  {
     title: 'Data Analyst',
     company: 'Elite Microsystems',
     period: 'AUG 2021 - JUL 2023',
@@ -125,12 +143,12 @@ export default function Experience() {
                             href={exp.link} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className={`text-base font-normal ${exp.company === 'Elite Microsystems' || exp.company === 'U&I Trust' ? 'text-white group-hover:text-[#64ffda]' : 'text-[#64ffda] group-hover:text-white'} transition-colors duration-200 hover:underline`}
+                            className="text-base font-normal text-white group-hover:text-[#64ffda] transition-colors duration-200 hover:underline"
                           >
                             {exp.company}
                           </a>
                         ) : (
-                          <span className={`text-base font-normal ${exp.company === 'Elite Microsystems' || exp.company === 'U&I Trust' ? 'text-white group-hover:text-[#64ffda]' : 'text-[#64ffda] group-hover:text-white'} transition-colors duration-200`}>
+                          <span className="text-base font-normal text-white group-hover:text-[#64ffda] transition-colors duration-200">
                             {exp.company}
                           </span>
                         )}

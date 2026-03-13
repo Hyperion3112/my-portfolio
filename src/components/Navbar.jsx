@@ -49,7 +49,7 @@ export default function Navbar({ className = '' }) {
           }
         });
       },
-      { rootMargin: '0px 0px -60% 0px', threshold: 0.25 }
+      { rootMargin: '0px 0px -50% 0px', threshold: 0.1 }
     );
 
     navLinks.forEach(link => {
