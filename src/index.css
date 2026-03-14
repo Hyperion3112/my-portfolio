@@ -14,6 +14,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom Selection Highlight */
+::selection {
+  background-color: rgba(100, 255, 218, 0.2); /* Theme's green with opacity */
+  color: #ccd6f6; /* Light slate text color */
+}
+
+::-moz-selection {
+  background-color: rgba(100, 255, 218, 0.2);
+  color: #ccd6f6;
+}
+
 /* Custom styles for vertical text */
 .writing-mode-vertical {
   writing-mode: vertical-rl;
