@@ -35,13 +35,16 @@ export default function About() {
         variants={aboutVariants}
       >
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          Hello! I'm <span className="text-[#ccd6f6] font-semibold">Shaunak</span>, a <span className="text-[#ccd6f6] font-semibold">data analyst</span> who loves to dive deep into data and surface clear, actionable insights. From building dashboards that empower executives to automating data pipelines that save hours every week, I enjoy turning messy datasets into stories that drive business decisions.
+          I'm a data professional specializing in analytics and business intelligence, and I love building clear, easy-to-understand data narratives. I really enjoy working at the intersection of business strategy and engineering, where I can take messy datasets and turn them into insights that actually mean something to people.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          Over the past few years I've analysed millions of rows of marketing, product-usage, and operational data for a <span className="text-[#ccd6f6] font-semibold">fast-growing SaaS company</span> and a <span className="text-[#ccd6f6] font-semibold">non-profit organisation</span>. My work has helped reduce costs, uncover growth opportunities, and improve user experiences.
+          Right now, I'm working as a Data Analytics Consultant for Blue Horse Digital, focusing on enterprise AI projects. Basically, my job is to dig into the data, set up reliable ETL pipelines, and work with leadership to build dashboards that track the performance of their new AI tools. It's all about making sure the data is accurate and the ROI is clear.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          When I'm not wrangling data you can find me reading about the latest in behavioural analytics.
+          Before this, I had the chance to work in a bunch of different places, from doing research at George Mason University to working at a startup like Elite Micro Systems and an NGO like U&I Trust. Along the way, I've also spent some free time building my own machine learning projects and interactive dashboards. These experiences really shaped my approach to data: it needs to be technically solid, but it's completely useless if the people running the business can't understand it.
+        </p>
+        <p className="text-[#8892b0] mb-4 leading-relaxed">
+          When I'm completely offline, you can usually find me playing video games, totally locked into a game of chess, hiking a new trail, or on the squash court.
         </p>
         <p className="text-[#8892b0] leading-relaxed mb-4">
           Here are a few tools and technologies I work with most:

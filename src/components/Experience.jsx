@@ -8,39 +8,39 @@ const experienceVariants = {
 
 const experiences = [
   {
-    title: 'Data Engineer',
+    title: 'Data Analytics Consultant (Contract)',
     company: 'Blue Horse Digital',
     period: 'FEB 2026 – PRESENT',
     description:
-      `Building and maintaining data pipelines and ML architectures as a volunteer data engineer. Focused on designing data-driven software solutions — from ingestion to model serving — and collaborating with the team to ship reliable, scalable systems.`,
-    tech: ['Data Engineering', 'Machine Learning', 'Python', 'SQL'],
+      `I conduct data discovery and audit phases for enterprise AI transformation projects. I build automated data pipelines in Python to bring together data from different parts of the company, making sure it's ready for AI models. I also create dashboards in Tableau for leadership to see the performance of our AI tools and understand their impact on efficiency.`,
+    tech: ['Python', 'Tableau', 'ETL', 'Data Analytics'],
     link: null,
   },
   {
-    title: 'Research Assistant',
-    company: 'George Mason University',
+    title: 'Graduate Data Analyst (Research Assistant)',
+    company: 'George Mason University: School of Computing',
     period: 'JUL 2025 – FEB 2026',
     description:
-      `Worked under faculty at the School of Computing, using Python, SQL, and Tableau to clean, analyze, and visualize research data for analytics projects. Built interactive dashboards and wrote scripts to automate repetitive data prep tasks, freeing up time for actual research work.`,
-    tech: ['Python', 'SQL', 'Tableau'],
+      `I analyzed student performance data to find grading patterns and anomalies. I built a predictive project in Power BI to help identify students who might drop out, allowing for early support. I also automated weekly data cleaning tasks using Python, which saved a lot of time, and created reports that helped guide the department's budget decisions.`,
+    tech: ['SQL', 'Excel', 'Power BI', 'Python', 'Predictive Analytics'],
     link: null,
   },
   {
     title: 'Data Analyst',
-    company: 'Elite Microsystems',
+    company: 'Elite Micro Systems',
     period: 'AUG 2021 - JUL 2023',
     description:
-      `Improved operational efficiency by 15% through SQL & Python analyses and stakeholder reporting. Reduced data retrieval time by 25% via optimized ETL pipelines and automated tasks. Boosted client decision-making by 30% with interactive Tableau dashboards and training.`,
-    tech: ['SQL', 'Python', 'Tableau'],
+      `I optimized complex SQL queries to analyze large volumes of monthly transaction data, helping to identify bottlenecks and significantly improve our overall transaction success rates. To ensure our systems were running smoothly, I designed and built interactive Tableau dashboards that monitored the health of our pan-India kiosk deployments, which allowed our teams to proactively address issues and fix them much faster. Beyond visualization, I also wrote Python scripts to automate tedious data entry processes for our audit compliance, saving the team hours of manual work each week. Finally, I regularly analyzed retail usage trends to provide actionable insights that helped optimize the locations of our payment terminals.`,
+    tech: ['SQL', 'Tableau', 'Python', 'EDA'],
     link: 'https://emplindia.com/',
   },
   {
-    title: 'Data Analyst Intern',
+    title: 'Data Intern',
     company: 'U&I Trust',
-    period: 'Nov 2020 – Jan 2021',
+    period: 'NOV 2020 – JAN 2021',
     description:
-      `Analyzed and cleaned over 500 candidate profiles using Excel and SQL, improving data accuracy by 40% and standardizing onboarding templates. Automated data workflows with Python and VBA, reducing manual effort by 50% and accelerating weekly report generation. Performed exploratory data analysis on candidate metrics, presented findings to HR, and increased engagement rates by 20% through targeted outreach. Developed Power BI dashboards, documented ETL processes, and facilitated knowledge transfer to junior interns.`,
-    tech: ['Excel', 'SQL', 'Python', 'VBA', 'Power BI'],
+      `I looked at student performance and attendance data using Excel to find areas where students were struggling and help optimize class sizes. I also tracked how students were using our new digital libraries to make sure the transition to remote learning went smoothly.`,
+    tech: ['Excel', 'Data Analysis'],
     link: 'https://uandi.org.in/',
   },
 ];
@@ -92,7 +92,7 @@ export default function Experience() {
             <div className="grid grid-cols-1 md:grid-cols-5 items-stretch md:gap-x-[10rem]">
               {/* Left: Years */}
               <div className="col-span-1 flex items-start px-6 py-4">
-                <span className="text-[#8892b0] font-mono text-xs tracking-wide whitespace-nowrap mt-1 group-hover:text-white transition-colors duration-200">AUG 2017 – JUL 2021</span>
+                <span className="text-[#8892b0] font-mono text-xs tracking-wide whitespace-nowrap mt-1 group-hover:text-white transition-colors duration-200">AUG 2017 – JUL 2023</span>
               </div>
               {/* Right: Content */}
               <div className="col-span-4 flex flex-col px-6 py-4 md:pl-8">

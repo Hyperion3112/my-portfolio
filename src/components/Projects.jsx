@@ -35,6 +35,15 @@ const projects = [
     embedUrl: null,
   },
   {
+    title: 'Film Market Intelligence & ROI Predictor',
+    image: '/FilmROIPredictor.png',
+    tech: ['Next.js', 'React', 'Tailwind CSS', 'SQLite'],
+    description: 'A full-stack application for film market analysis and ROI prediction. Features a Saturation Score to identify hidden gem indie films and predict their breakout potential, includes visualizations for ROI analysis, and auto-generates strategic recommendations.',
+    link: 'https://film-roi-predictor.vercel.app/',
+    hasEmbeddedDashboard: false,
+    embedUrl: null,
+  },
+  {
     title: 'Global GenAI Adoption & Intent Analysis (2024-2025)',
     image: 'https://public.tableau.com/static/images/Gl/GlobalGenAIAdoptionIntent2024-2025Analysis/Dashboard1GlobalBenchmark/1.png',
     tech: ['Python', 'Data Modeling', 'Tableau', 'Data Visualization', 'Analytics'],
