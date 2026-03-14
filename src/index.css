@@ -16,13 +16,13 @@ html {
 
 /* Custom Selection Highlight */
 ::selection {
-  background-color: rgba(100, 255, 218, 0.2); /* Theme's green with opacity */
-  color: #ccd6f6; /* Light slate text color */
+  background-color: #64ffda; /* Solid neon green */
+  color: #0a192f; /* Dark navy text for contrast */
 }
 
 ::-moz-selection {
-  background-color: rgba(100, 255, 218, 0.2);
-  color: #ccd6f6;
+  background-color: #64ffda;
+  color: #0a192f;
 }
 
 /* Custom styles for vertical text */
