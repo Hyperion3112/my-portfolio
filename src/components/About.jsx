@@ -38,7 +38,7 @@ export default function About() {
           I'm a data professional specializing in analytics and business intelligence, and I love building clear, easy-to-understand data narratives. I really enjoy working at the intersection of business strategy and engineering, where I can take messy datasets and turn them into insights that actually mean something to people.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
-          Right now, I'm working as a Data Analytics Consultant for Blue Horse Digital, focusing on enterprise AI projects. Basically, my job is to dig into the data, set up reliable ETL pipelines, and work with leadership to build dashboards that track the performance of their new AI tools. It's all about making sure the data is accurate and the ROI is clear.
+          Right now, I'm working as a Data Engineer for Blue Horse Digital, focusing on enterprise AI projects. Basically, my job is to dig into the data, set up reliable ETL pipelines, and work with leadership to build dashboards that track the performance of their new AI tools. It's all about making sure the data is accurate and the ROI is clear.
         </p>
         <p className="text-[#8892b0] mb-4 leading-relaxed">
           Before this, I had the chance to work in a bunch of different places, from doing research at George Mason University to working at a startup like Elite Micro Systems and an NGO like U&I Trust. Along the way, I've also spent some free time building my own machine learning projects and interactive dashboards. These experiences really shaped my approach to data: it needs to be technically solid, but it's completely useless if the people running the business can't understand it.

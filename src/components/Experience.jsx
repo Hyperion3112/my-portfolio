@@ -8,30 +8,30 @@ const experienceVariants = {
 
 const experiences = [
   {
-    title: 'Data Analytics Consultant (Contract)',
+    title: 'Data Engineer (Contract)',
     company: 'Blue Horse Digital',
     period: 'FEB 2026 – PRESENT',
     description:
-      `I conduct data discovery and audit phases for enterprise AI transformation projects. I build automated data pipelines in Python to bring together data from different parts of the company, making sure it's ready for AI models. I also create dashboards in Tableau for leadership to see the performance of our AI tools and understand their impact on efficiency.`,
-    tech: ['Python', 'Tableau', 'ETL', 'Data Analytics'],
-    link: null,
+      "Engineered automated ETL pipelines to centralize siloed enterprise datasets into a single data warehouse, accelerating executive reporting and reducing manual data preparation. Orchestrated data integration workflows to standardize information and minimize reporting errors. Developed executive-facing Tableau dashboards to track supply chain performance, and led data governance initiatives to ensure high data quality and consistency.",
+    tech: ['Python', 'Snowflake', 'dbt', 'Tableau', 'ETL/ELT', 'Data Governance'],
+    link: 'https://www.bluehorse.ai',
   },
   {
-    title: 'Graduate Data Analyst (Research Assistant)',
+    title: 'Research Assistant (Data Analytics)',
     company: 'George Mason University: School of Computing',
     period: 'JUL 2025 – FEB 2026',
     description:
-      `I analyzed student performance data to find grading patterns and anomalies. I built a predictive project in Power BI to help identify students who might drop out, allowing for early support. I also automated weekly data cleaning tasks using Python, which saved a lot of time, and created reports that helped guide the department's budget decisions.`,
-    tech: ['SQL', 'Excel', 'Power BI', 'Python', 'Predictive Analytics'],
-    link: null,
+      "Designed SQL-based data pipelines and automated recurring data workflows using Python to analyze student performance records. Built interactive Power BI dashboards that helped faculty actively engage with students and improve on-time submission rates. Synthesized complex analytical findings into executive-ready 'State of the College' reports to guide major enrollment, retention, and budget decisions.",
+    tech: ['SQL', 'Python', 'Apache Airflow', 'Power BI', 'Data Analytics'],
+    link: 'https://computing.gmu.edu',
   },
   {
     title: 'Data Analyst',
     company: 'Elite Micro Systems',
     period: 'AUG 2021 - JUL 2023',
     description:
-      `I optimized complex SQL queries to analyze large volumes of monthly transaction data, helping to identify bottlenecks and significantly improve our overall transaction success rates. To ensure our systems were running smoothly, I designed and built interactive Tableau dashboards that monitored the health of our pan-India kiosk deployments, which allowed our teams to proactively address issues and fix them much faster. Beyond visualization, I also wrote Python scripts to automate tedious data entry processes for our audit compliance, saving the team hours of manual work each week. Finally, I regularly analyzed retail usage trends to provide actionable insights that helped optimize the locations of our payment terminals.`,
-    tech: ['SQL', 'Tableau', 'Python', 'EDA'],
+      "Optimized complex SQL queries and database structures to improve transaction success rates for smart payment terminals. Automated routine compliance reporting using Python to eliminate manual effort. Developed interactive Tableau dashboards to proactively monitor the health of regional kiosk deployments, and analyzed retail usage trends to deliver optimization reports that increased terminal ROI.",
+    tech: ['SQL', 'Python', 'Tableau', 'REST APIs', 'Data Visualization'],
     link: 'https://emplindia.com/',
   },
   {
@@ -39,8 +39,8 @@ const experiences = [
     company: 'U&I Trust',
     period: 'NOV 2020 – JAN 2021',
     description:
-      `I looked at student performance and attendance data using Excel to find areas where students were struggling and help optimize class sizes. I also tracked how students were using our new digital libraries to make sure the transition to remote learning went smoothly.`,
-    tech: ['Excel', 'Data Analysis'],
+      "Analyzed student attendance and academic performance data across multiple locations using Excel and data validation techniques. Built reporting frameworks to identify critical learning gaps and consolidate data from multiple sources. Evaluated engagement metrics for newly launched digital libraries, improving visibility for leadership teams and contributing to a successful transition to remote learning.",
+    tech: ['Excel', 'Data Analysis', 'Reporting'],
     link: 'https://uandi.org.in/',
   },
 ];
